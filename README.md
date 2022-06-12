@@ -104,4 +104,8 @@ pandoc file.md --standalone --template=seminarfach -o outputfile.pdf --pdf-engin
 
 + [ ] definition von `documentclass` unnötig machen 
 + [ ] vielleicht generelle einführung in Pandoc
-
++ [ ] Richtige Zitierweise implementieren siehe [CSL](https://github.com/citation-style-language/styles)
+	+ [CSL-Editor](https://editor.citationstyles.org/about/)
+	+ [Pandoc-citations](https://pandoc.org/MANUAL.html#citations)
+	+ Vorlagen die möglicherweise passen: [1](https://editor.citationstyles.org/styleInfo/?styleId=http%3A%2F%2Fwww.zotero.org%2Fstyles%2Fneuroimaging-clinics-of-north-america), [2](https://editor.citationstyles.org/styleInfo/?styleId=http%3A%2F%2Fwww.zotero.org%2Fstyles%2Fbritish-journal-of-dermatology)
+	+ und dann natürlich noch erklären eg. .bib datein etc.
