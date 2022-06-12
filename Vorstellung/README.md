@@ -1,10 +1,6 @@
 # Ein einfacher Pandoc/Markdown-Spickzettel
 
-pandoc ist ein Toolpaket zur Konvertierung zwischen Textformaten. Als
-Schriftsteller (und nicht als Techniker) finde ich es nützlich, um
-etwas, das in einfachem Text geschrieben wurde, in eine RTF-Datei zu
-konvertieren, die ich in einem Textverarbeitungsprogramm - bis hin zum
-gefürchteten Word - problemlos mit einigen Formatierungen lesen kann.
+pandoc ist ein Toolpaket zur Konvertierung zwischen Textformaten.
 Was ich hier beschreibe, ist nur ein winziger Bruchteil dessen, was man
 damit machen kann.
 
