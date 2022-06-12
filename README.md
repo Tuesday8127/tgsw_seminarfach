@@ -63,6 +63,6 @@ pandoc file.md --standalone --template=seminarfach -o outputfile.pdf --pdf-engin
 
 # Todo
 
-+ [] Beispiel Datei
-+ [] definition von `documentclass` unnötig machen 
-+ [] vielleicht generelle einführung in Pandoc
++ [ ] Beispiel Datei
++ [ ] definition von `documentclass` unnötig machen 
++ [ ] vielleicht generelle einführung in Pandoc
