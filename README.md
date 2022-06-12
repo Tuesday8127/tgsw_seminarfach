@@ -50,6 +50,40 @@ Falls ein Deckblatt generiert werden soll müssen diese Variablen gesetzt werden
 
 Um eine eigenes Latex-Deckblatt zu benutzen muss `deckblatt-datei: Pfad-zur-datei` angegeben werden, z.B. `deckblatt-datei: ./deckblatt.tex`
 
+### Beispiele
+
+#### Yaml Kopf
+
+```yaml
+---
+documentclass: article
+titel: A very long title about stuff that is very interessting
+kurztitel: A title
+mainfont: Carlito
+deckblatt: true
+schulname: Schule Niemandsland
+seminarfachlehrer-in: Karl Marx
+fachbetreuer: Albert Einstein
+student:
+- nachname: Erbse
+  name: Markus
+  stammkurs: 21 1
+- nachname: Fuchs
+  name: Elise
+  stammkurs: 12 7
+- nachname: Gurke
+  name: Angela
+  stammkurs: 14 5
+nur-nachname: true
+datum: 21. Dezember 1999
+---
+```
+
+#### Dokument
+
++ [Quell-Markdown](Beispiele/example.md)
++ [Entstandene PDF-Datei](Beispiele/example.pdf)
+
 ### Kompilieren
 
 + template datei muss in User-Dir/templates sein siehe `pandoc -v`
@@ -60,6 +94,11 @@ Um eine eigenes Latex-Deckblatt zu benutzen muss `deckblatt-datei: Pfad-zur-date
 ```bash
 pandoc file.md --standalone --template=seminarfach -o outputfile.pdf --pdf-engine=xelatex
 ```
+
+# Ressourcen
+
++ [allgemeine Ressourcen zu Pandoc und Markdown](https://baireuther.de/page/markdown/)
++ [Pandoc Installation](https://pandoc.org/installing.html)
 
 # Todo
 
