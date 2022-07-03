@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<style class="note" version="1.0" name-form="short" et-al-min="2" et-al-use-first="1" demote-non-dropping-particle="never" default-locale="de-DE" xmlns="http://purl.org/net/xbiblio/csl">
+  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
+  <info>
+    <title>TGS-Weimar Seminarfach</title>
+    <title-short>TGS-Weimar</title-short>
+    <id>http://www.zotero.org/styles/tgs-weimar-seminarfach</id>
+    <link rel="self" href="http://www.zotero.org/styles/tgs-weimar-seminarfach"/>
+    <author>
+      <name>Oskar Götze</name>
+      <email>tgs.info.oskar@gmail.com</email>
+    </author>
+    <summary>Seminarfach</summary>
+    <updated>2022-07-02T19:51:04+00:00</updated>
+    <rights>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  <macro name="author">
+    <choose>
+      <if match="any" variable="editor">
+        <names variable="editor" font-style="normal" font-variant="normal" text-decoration="none" vertical-align="baseline" suffix=": "/>
+      </if>
+      <else-if match="any" variable="collection-editor">
+        <names variable="collection-editor" suffix=": "/>
+      </else-if>
+      <else-if match="any" variable="author">
+        <names variable="author" font-style="normal" suffix=":  "/>
+      </else-if>
+      <else>
+        <text value="o.A." suffix=": "/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="title">
+    <choose>
+      <if match="any" variable="title-short">
+        <text variable="title-short" suffix=", "/>
+      </if>
+      <else>
+        <text variable="title" suffix=", "/>
+      </else>
+    </choose>
+  </macro>
+  <citation>
+    <layout vertical-align="sup">
+      <text variable="citation-number" vertical-align="sup" display="block"/>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout>
+      <text variable="citation-number" suffix=" "/>
+      <choose>
+        <if match="any" position="ibid-with-locator">
+          <text term="ibid"/>
+        </if>
+        <else>
+          <text macro="author"/>
+          <text macro="title"/>
+        </else>
+      </choose>
+      <text variable="page" suffix="."/>
+      <choose>
+        <if match="any" position="ibid-with-locator"/>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
