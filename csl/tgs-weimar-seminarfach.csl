@@ -11,7 +11,7 @@
       <email>tgs.info.oskar@gmail.com</email>
     </author>
     <summary>Seminarfach</summary>
-    <updated>2022-07-02T19:51:04+00:00</updated>
+    <updated>2022-07-03T14:27:08+00:00</updated>
     <rights>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <macro name="author">
@@ -40,27 +40,23 @@
       </else>
     </choose>
   </macro>
-  <citation>
-    <layout vertical-align="sup">
-      <text variable="citation-number" vertical-align="sup" display="block"/>
-    </layout>
-  </citation>
-  <bibliography>
-    <layout>
-      <text variable="citation-number" suffix=" "/>
+  <citation name-form="short">
+    <layout vertical-align="baseline">
       <choose>
         <if match="any" position="ibid-with-locator">
           <text term="ibid"/>
         </if>
+        <else-if match="any" position="ibid">
+          <text term="ibid"/>
+          <text variable="page"/>
+        </else-if>
         <else>
           <text macro="author"/>
           <text macro="title"/>
+          <text variable="page" suffix="."/>
         </else>
       </choose>
-      <text variable="page" suffix="."/>
-      <choose>
-        <if match="any" position="ibid-with-locator"/>
-      </choose>
     </layout>
-  </bibliography>
+  </citation>
+  <bibliography/>
 </style>

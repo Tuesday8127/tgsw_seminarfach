@@ -19,6 +19,8 @@ student:
   stammkurs: 14 5
 nur-nachname: true
 datum: 21. Dezember 1999
+csl: ../csl/tgs-weimar-seminarfach.csl
+bibliography: ./Bibliografie.bib
 ---
 
 # Einleitung
@@ -28,6 +30,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ![Beispiel Bild^[https://unsplash.com/photos/6DIOws7bowA]](https://unsplash.com/photos/6DIOws7bowA/download?ixid=MnwxMjA3fDB8MXxhbGx8MjN8fHx8fHwyfHwxNjU1MDU2ODYx&force=true&w=1920)
 
 Sequitur sunt tota Democriti, atomi, inane, imagines, quae eidola nominant, quorum incursione non solum videamus, sed etiam praetereat omnes voluptates, dolores denique quosvis suscipere malit quam deserere ullam officii partem, ad ea, quae dices, libenter assentiar. Probabo, inquit, modo ista sis aequitate.
+
+Hier könnte etwas stehen das ich aus einem Buch zitiere[@zotero-54, S. 21 ff] .
 
 Familiaritatem effecerit, tum amorem efflorescere tantum, ut, etiamsi nulla sit utilitas ex amicitia, tamen ipsi amici propter se esse iucunda, per se ipsa allicit nec patientia nec assiduitas nec vigiliae nec ea ipsa, quae ab illo est, tum innumerabiles mundi, qui et oriantur et intereant cotidie. Quae.
 
@@ -57,5 +61,3 @@ Familiaritatem effecerit, tum amorem efflorescere tantum, ut, etiamsi nulla sit 
 : Eine Beispiel Tabelle
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquip ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
-
-Sequitur sunt tota Democriti, atomi, inane, imagines, quae eidola nominant, quorum incursione non solum videamus, sed etiam praetereat omnes voluptates, dolores denique quosvis suscipere malit quam deserere ullam officii partem, ad ea, quae dices, libenter assentiar. Probabo, inquit, modo ista sis aequitate.
