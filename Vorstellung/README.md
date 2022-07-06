@@ -14,19 +14,16 @@ Es kann eine Datei konvertieren, die nur aus Tippen besteht, aber wenn
 Sie ein wenig einfache Formatierung verwenden, ziemlich genau eine
 Version der Markdown-Syntax, können Sie ein schönes RTF mit einigen
 nützlichen Zusatzfunktionen (zum Beispiel Kursivschrift) erhalten. Für
-eine Überschrift unterstreichen Sie mit Gleichheitszeichen oder
-Bindestrichen in der nächsten Zeile;
+eine Überschrift benutzen Sie '#'. 1 # steht für Ebene 1 (Titel).
+2 # steht für Ebene 2, usw. Es gibt insgesamt 6 Ebenen.
 
-    Überschrift hier
-    ------------
 
-oder
+# Überschrift 1
+## Überschrift 2
+...
+###### Überschrift 6 
 
-    Überschrift hier
-    ============
-
-wenn sie verarbeitet werden, ergibt das eine Überschrift. (Für richtige
-H1 H2 usw. siehe unten).
+---
 
 Die Absatzbildung wird durch Leerzeilen bestimmt, so dass dieser Text in
 der RTF-Datei einen Absatz ergibt und\...
@@ -39,10 +36,10 @@ in der RTF-Datei.
 Wenn ich einen Return erzwingen will, beende ich eine Zeile mit einem
 Backslash.
 
-Dies funktioniert nicht innerhalb von Backtics (siehe unten), die die
+Dies funktioniert nicht innerhalb von einfachen Anführungszeichen (siehe unten), die die
 wortwörtliche Umgebung darstellen. Wenn ich also zum Beispiel einen
 Haufen Zeug wortwörtlich, ohne Zwischenabstände, haben möchte, beende
-ich jede Zeile mit einem Backslash *außerhalb der* Backtics:
+ich jede Zeile mit einem Backslash *außerhalb der* Anführungszeichen:
 
 `Zeile 1''`\
 `Zeile 2''`\
