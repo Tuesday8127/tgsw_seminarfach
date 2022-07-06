@@ -64,6 +64,12 @@ Damit Es überhaupt etwas zu Zitieren gibt, wird eine Bib-Latex Datei benötigt.
 Ich zitiere: „Sein oder Nichtsein, das ist hier die Frage“[@citationkey].
 ```
 
+Um die Seitenzahl oder einen Vergleich anzugeben kann so geschreiben werden:
+
+```md
+Ich zitiere: „Sein oder Nichtsein, das ist hier die Frage“[vgl. @citationkey, S. 30].
+```
+
 Und im Header muss der Pfad zu `.bib` Datei angegeben werden z.B.:
 
 ```yaml
