@@ -2,7 +2,7 @@
 
 ## Pandoc Template
 
-Das Template [seminarfach.latex](https://gitlab.com/october32551/tgsw_semi/-/blob/main/templates/seminarfach.latex) ist eine Modifikation des [default Pandoc Templates](https://github.com/jgm/pandoc/blob/master/data/templates/default.latex).
+Das Template [seminarfach.latex](https://github.com/Tuesday8127/tgsw_seminarfach/blob/main/templates/seminarfach.latex) ist eine Modifikation des [default Pandoc Templates](https://github.com/jgm/pandoc/blob/master/data/templates/default.latex).
 
 ### Variablen
 
