@@ -22,6 +22,9 @@ $for(classoption)$
 $endfor$
 ]{$documentclass$}
 
+% for underlining with linebreaks
+\usepackage[normalem]{ulem}
+
 % Kopf und Fußzeile
 \usepackage{fancyhdr}
 \setlength{\parskip}{1em}
@@ -162,11 +165,15 @@ $endif$
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-$if(title-meta)$
-  pdftitle={$title-meta$},
+$if(titel)$
+  pdftitle={$titel$},
 $endif$
-$if(author-meta)$
-  pdfauthor={$author-meta$},
+$if(student)$
+  pdfauthor={
+	$for(student)$
+	$student.nachname$,  
+	$endfor$
+  },
 $endif$
 $if(lang)$
   pdflang={$lang$},
@@ -246,11 +253,11 @@ $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
 \DeclareRobustCommand{\href}[2]{#2\footnote{\url{#1}}}
 $endif$
-$if(strikeout)$
-\usepackage[normalem]{ulem}
-% Avoid problems with \sout in headers with hyperref
-\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
-$endif$
+% $if(strikeout)$
+% \usepackage[normalem]{ulem}
+% % Avoid problems with \sout in headers with hyperref
+% \pdfstringdefDisableCommands{\renewcommand{\sout}{}}
+% $endif$
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -344,6 +351,7 @@ $endif$
 \usepackage[figurename=Abb., tablename=Abb.]{caption}
 % Figuren unabhängig von Chapter nummerieren
 % https://texblog.org/2014/12/04/continuous-figuretable-numbering-in-latex/
+% nur für documentclass book
 % \counterwithout{figure}{chapter}
 
 % \usepackage{titlesec}
@@ -353,6 +361,8 @@ $endif$
 % {\normalfont\fontsize{14pt}{16.8pt}\selectfont\bfseries}{\thesection}{1em}{}
 % \titleformat*{\subsection}
 % {\normalfont\fontsize{12pt}{14.4pt}\selectfont\bfseries}{\thesubsection}{1em}{}
+
+% Richtige Schriftgröße in den Headern
 \usepackage{sectsty}
 
 \sectionfont{\fontsize{16}{19}\selectfont}
@@ -372,13 +382,15 @@ $if(deckblatt)$
         \centering
         \vspace*{2cm}
 	% \line(1,0){\textwidth}\\
-	% \hrulefill{}\\
-	\underline{\underline{\LARGE{\textbf{$titel$}}}}\\
-	\vspace*{1cm}
+	\hrulefill{}\\
+	\LARGE{\textbf{$titel$}}\\
+	\vspace*{-0.5cm}
+	\hrulefill{}\\
+	\vspace*{0.5cm}
 	% \line(1,0){375}
 	% \hrulefill{}\\
-	\large{Seminarfach}\\
-        \large{$schulname$}
+	\Large{Seminarfach}\\
+        \Large{$schulname$}
         \vfill
         $if(seminarfachlehrer-in)$
 	\large{\textit{SeminarfachlehrerIn:} $seminarfachlehrer-in$}\\
@@ -403,7 +415,8 @@ $if(deckblatt)$
         \large{$it.nachname$, $it.name$ --- $it.stammkurs$}\\
         $endfor$
 	\vfill
-	\hrulefill{}\large{$datum$}\hrulefill{}
+	\large{$datum$}\\
+	\hrulefill{}
         \vspace*{2cm}
 \end{titlepage}
 $endif$
