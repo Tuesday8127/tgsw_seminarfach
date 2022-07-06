@@ -400,7 +400,7 @@ $if(deckblatt)$
         $endif$
 	\line(1,0){100}\\
         $for(student)$
-        \large{$it.nachname$ $it.name$, $it.stammkurs$}\\
+        \large{$it.nachname$, $it.name$ --- $it.stammkurs$}\\
         $endfor$
 	\vfill
 	\hrulefill{}\large{$datum$}\hrulefill{}
