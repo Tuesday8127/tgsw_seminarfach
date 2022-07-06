@@ -50,6 +50,28 @@ Falls ein Deckblatt generiert werden soll müssen diese Variablen gesetzt werden
 
 Um eine eigenes Latex-Deckblatt zu benutzen muss `deckblatt-datei: Pfad-zur-datei` angegeben werden, z.B. `deckblatt-datei: ./deckblatt.tex`
 
+### Zitieren
+
+Um Zitate in den Fußnoten nach den Vorgaben zu formatieren, kann diese [CSL-Datei](csl/tgs-weimar-seminarfach.csl) benutzt werden. Dazu muss diese im Header angegeben werden.
+
+```yaml
+csl: ./tgs-weimar-seminarfach.csl
+```
+
+Damit Es überhaupt etwas zu Zitieren gibt, wird eine Bib-Latex Datei benötigt. Diese kann einfach aus [Zotero](https://www.zotero.org/) mit dem [Better Bibtex Addon](https://retorque.re/zotero-better-bibtex/installation/) exportiert werden. Dabei müssen sogenannte Citation-Keys für jeden Eintrag (Quelle) [gesetzt werden](https://alix-lahuec.gitbook.io/zotero-roam/getting-started/prereqs#setup-checklist). Dann können die Quellen in eine Bib-Latex Datei exportiert werden, in dem beim Rechtsklick auf die Sammlung oder Bibliothek exportiern gewählt wird und im erscheinenden Menü das Format zu Better Biblatex gesetzt wird und und besten auch noch "Halte aktuell" ausgewählt wird. In der Markdown-Datei kann dann so die Quelle angegeben werden:
+
+```md
+Ich zitiere: „Sein oder Nichtsein, das ist hier die Frage“[@citationkey].
+```
+
+Und im Header muss der Pfad zu `.bib` Datei angegeben werden z.B.:
+
+```yaml
+bibliography: ./meine_bibliografie
+```
+
+(Unter Windows werden Pfade etwas anders mit einem Backslash (` \ `) angegeben)
+
 ### Beispiele
 
 #### Yaml Kopf
@@ -76,6 +98,8 @@ student:
   stammkurs: 14 5
 nur-nachname: true
 datum: 21. Dezember 1999
+csl: ./tgs-weimar-seminarfach.csl
+bibliography: ./meine_bibliografie.bib
 ---
 ```
 
@@ -92,7 +116,7 @@ datum: 21. Dezember 1999
 + Befehl:
 
 ```bash
-pandoc file.md --standalone --template=seminarfach -o outputfile.pdf --pdf-engine=xelatex
+pandoc file.md --standalone --template=seminarfach -o outputfile.pdf --pdf-engine=xelatex -C
 ```
 
 # Ressourcen
@@ -104,4 +128,9 @@ pandoc file.md --standalone --template=seminarfach -o outputfile.pdf --pdf-engin
 
 + [ ] definition von `documentclass` unnötig machen 
 + [ ] vielleicht generelle einführung in Pandoc
-
++ [x] Richtige Zitierweise implementieren siehe [CSL](https://github.com/citation-style-language/styles)
+	+ [CSL-Editor](https://editor.citationstyles.org/about/)
+	+ [Pandoc-citations](https://pandoc.org/MANUAL.html#citations)
+	+ Vorlagen die möglicherweise passen: [1](https://editor.citationstyles.org/styleInfo/?styleId=http%3A%2F%2Fwww.zotero.org%2Fstyles%2Fneuroimaging-clinics-of-north-america), [2](https://editor.citationstyles.org/styleInfo/?styleId=http%3A%2F%2Fwww.zotero.org%2Fstyles%2Fbritish-journal-of-dermatology)
+	+ und dann natürlich noch erklären eg. .bib datein etc.
++ [ ] Wenn Dokumentation etc. zu viel wird zu wiki umsteigen
