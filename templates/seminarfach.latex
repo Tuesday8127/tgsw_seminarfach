@@ -354,6 +354,15 @@ $endif$
 % nur für documentclass book
 % \counterwithout{figure}{chapter}
 
+% Selber Counter für Figuren und Tabellen
+% https://tex.stackexchange.com/questions/422131/how-to-use-the-same-numbering-counter-for-figures-tables-and-listings
+\makeatletter
+\let\c@table\c@figure
+\let\c@lstlisting\c@figure
+\let\ftype@table\ftype@figure
+\let\ftype@listings\ftype@figure
+\makeatother
+
 % \usepackage{titlesec}
 % \titleformat*{\chapter}
 % {\normalfont\fontsize{16pt}{19.2pt}\selectfont\bfseries}{\thechapter}{}{}
