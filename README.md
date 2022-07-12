@@ -20,7 +20,7 @@ Die folgenden Variablen müssen in dem [Yaml Metadata Block](https://pandoc.org/
 	+ falls `titel` zu lang für die Kopfzeile ist, kann **auch** ein kurztitel definiert werden
 	+ eg. `kurztitel: Mein Thema`
 + `student`
-	+ wenn mehrere Angegeben werden sollten diese schon Alphabetisch sortiert angegeben werden
+	+ wenn mehrere Personen angegeben werden, sollten diese alphabetisch nach Nachnamen sortiert eingetragen werden
 	+ eg.:
 
 ```yaml
@@ -35,6 +35,8 @@ student:
 
 + `nur-nachname`
 	+ kann zu `nur-nachname: true` gesetzt werden um nur die Nachnamen in der Kopfzeile zu setzen
++ `fnt-per-site`
+	+ um eine Fußnoten nummerierung per Seite zuerreichen, muss `fnt-per-site: true` gesetzt werden
 
 #### Deckblatt
 
@@ -106,6 +108,7 @@ nur-nachname: true
 datum: 21. Dezember 1999
 csl: ./tgs-weimar-seminarfach.csl
 bibliography: ./meine_bibliografie.bib
+fnt-per-site: true
 ---
 ```
 

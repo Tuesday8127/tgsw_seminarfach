@@ -21,6 +21,7 @@ nur-nachname: true
 datum: 21. Dezember 1999
 csl: ../csl/tgs-weimar-seminarfach.csl
 bibliography: ./Bibliografie.bib
+fnt-per-site: true
 ---
 
 # Einleitung

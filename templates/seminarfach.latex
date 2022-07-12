@@ -53,6 +53,12 @@ $endfor$
 \renewcommand{\headwidth}{\textwidth}
 % \renewcommand{\headrulewidth}{0pt} % Entfernt Linie unter Kopfzeile
 
+% footnote nummerierung per Seite oder per page
+$if(fnt-per-site)$
+\usepackage{perpage}
+\MakePerPage{footnote}
+$endif$
+
 \usepackage{amsmath,amssymb}
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
