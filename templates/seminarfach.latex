@@ -25,6 +25,8 @@ $endfor$
 % for underlining with linebreaks
 \usepackage[normalem]{ulem}
 
+\usepackage[onehalfspacing]{setspace}
+
 % Kopf und Fußzeile
 \usepackage{fancyhdr}
 \setlength{\parskip}{1em}
