@@ -27,6 +27,11 @@ $endfor$
 
 \usepackage[onehalfspacing]{setspace}
 
+% Option for Footnotes at bottom
+$if(fnt-bottom)$
+\usepackage[bottom]{footmisc}
+$endif$
+
 % Kopf und Fußzeile
 \usepackage{fancyhdr}
 \setlength{\parskip}{1em}
@@ -43,7 +48,7 @@ $endfor$
 \fancyhead[R]{
 	$for(student)$
 	$if(nur-nachname)$
-	$student.nachname$ 
+	$student.nachname$
 	$else$
 	\textit{$student.name$} $student.nachname$ 
 	$endif$
@@ -59,6 +64,14 @@ $endfor$
 $if(fnt-per-site)$
 \usepackage{perpage}
 \MakePerPage{footnote}
+$endif$
+
+$if(no-auto-section-numbering)$
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+%for the toc
+\renewcommand{\numberline}[1]{}
 $endif$
 
 \usepackage{amsmath,amssymb}
@@ -179,7 +192,7 @@ $endif$
 $if(student)$
   pdfauthor={
 	$for(student)$
-	$student.nachname$,  
+	$student.nachname$ 
 	$endfor$
   },
 $endif$
@@ -206,7 +219,7 @@ $endif$
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allow verbatim text in footnotes
 $endif$
-\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.0cm, includehead, includefoot, heightrounded]{geometry}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.0cm, includehead, includefoot, heightrounded, a4paper]{geometry}
 $if(listings)$
 \usepackage{listings}
 \newcommand{\passthrough}[1]{#1}

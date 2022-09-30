@@ -37,6 +37,8 @@ student:
 	+ kann zu `nur-nachname: true` gesetzt werden um nur die Nachnamen in der Kopfzeile zu setzen
 + `fnt-per-site`
 	+ um eine Fußnoten nummerierung per Seite zuerreichen, muss `fnt-per-site: true` gesetzt werden
++ `no-auto-section-numbering`
+	+ wenn true, dann werden die Überschriften nicht automatisch nummeriert
 
 #### Deckblatt
 
