@@ -54,6 +54,8 @@ Falls ein Deckblatt generiert werden soll müssen diese Variablen gesetzt werden
 
 Um eine eigenes Latex-Deckblatt zu benutzen muss `deckblatt-datei: Pfad-zur-datei` angegeben werden, z.B. `deckblatt-datei: ./deckblatt.tex`
 
+Alternativ kann auch eine PDF Datei als Deckblatt verwendet werden: `deckblatt-pdf-datei: ./deckblatt.pdf`
+
 ### Zitieren
 
 Um Zitate in den Fußnoten nach den Vorgaben zu formatieren, kann diese [CSL-Datei](csl/tgs-weimar-seminarfach.csl) benutzt werden. Dazu muss diese im Header angegeben werden.
