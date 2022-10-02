@@ -32,6 +32,11 @@ $if(fnt-bottom)$
 \usepackage[bottom]{footmisc}
 $endif$
 
+% for including custom pdf deckblatt
+$if(deckblatt-pdf-datei)$
+\usepackage{pdfpages}
+$endif$
+
 % Kopf und Fußzeile
 \usepackage{fancyhdr}
 \setlength{\parskip}{1em}
@@ -401,9 +406,14 @@ $endif$
 
 \begin{document}
 
-% Deckblatt
+% Tex Deckblatt
 $if(deckblatt-datei)$
 \input{$deckblatt-datei$}
+$endif$
+
+% PDF Deckblatt
+$if(deckblatt-pdf-datei)$
+\includepdf[pages=1]{$deckblatt-pdf-datei$}
 $endif$
 
 % Default Deckblatt
