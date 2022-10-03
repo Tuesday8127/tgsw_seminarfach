@@ -65,7 +65,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Unterunterkapitel
 
-Sequitur sunt tota Democriti, atomi, inane, imagines, quae eidola nominant, quorum incursione non solum videamus, sed etiam praetereat omnes voluptates, dolores denique quosvis suscipere malit quam deserere ullam officii partem, ad ea, quae dices, libenter assentiar. Probabo, inquit, modo ista sis aequitate.
+Sequitur sunt tota Democriti, atomi, inane, imagines, quae eidola nominant, quorum incursione non solum videamus, sed etiam praetereat omnes voluptates, dolores denique quosvis suscipere malit quam deserere ullam officii partem, ad ea, quae dices^[Sequitur sunt tota Democriti, atomi, inane, imagines, quae eidola nominant, quorum incursione non solum videamus, sed etiam praetereat omnes voluptates, dolores denique quosvis suscipere malit quam deserere ullam officii partem], libenter assentiar. Probabo, inquit, modo ista sis aequitate.
 
 Familiaritatem effecerit, tum amorem efflorescere tantum, ut, etiamsi nulla sit utilitas ex amicitia, tamen ipsi amici propter se esse iucunda, per se ipsa allicit nec patientia nec assiduitas nec vigiliae nec ea ipsa, quae ab illo est, tum innumerabiles mundi, qui et oriantur et intereant cotidie. Quae.
 

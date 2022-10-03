@@ -28,9 +28,15 @@ $endfor$
 \usepackage[onehalfspacing]{setspace}
 
 % Option for Footnotes at bottom
+% $if(fnt-bottom)$
+% \usepackage[bottom]{footmisc}
+% $endif$
+
+\usepackage[hang
 $if(fnt-bottom)$
-\usepackage[bottom]{footmisc}
+,bottom
 $endif$
+]{footmisc}
 
 % for including custom pdf deckblatt
 $if(deckblatt-pdf-datei)$
