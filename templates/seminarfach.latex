@@ -410,8 +410,11 @@ $endif$
 \subsectionfont{\fontsize{14}{17}\selectfont}
 \subsubsectionfont{\fontsize{12}{15}\selectfont}
 
+
+% no hyphenation
 \usepackage[none]{hyphenat}
 
+% https://latex.org/forum/viewtopic.php?t=21170
 \tolerance 1414
 \hbadness 1414
 \emergencystretch 1.8em
