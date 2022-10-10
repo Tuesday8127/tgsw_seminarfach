@@ -410,6 +410,16 @@ $endif$
 \subsectionfont{\fontsize{14}{17}\selectfont}
 \subsubsectionfont{\fontsize{12}{15}\selectfont}
 
+\usepackage[none]{hyphenat}
+
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.8em
+\hfuzz 0.3pt
+\widowpenalty=10000
+\vfuzz \hfuzz
+\raggedbottom
+
 \begin{document}
 
 % Tex Deckblatt
