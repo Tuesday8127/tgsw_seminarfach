@@ -415,13 +415,23 @@ $endif$
 \usepackage[none]{hyphenat}
 
 % https://latex.org/forum/viewtopic.php?t=21170
-\tolerance 1414
-\hbadness 1414
-\emergencystretch 1.8em
-\hfuzz 0.3pt
-\widowpenalty=10000
-\vfuzz \hfuzz
-\raggedbottom
+% \tolerance 1414
+% \hbadness 1414
+% \emergencystretch 1.8em
+% \hfuzz 0.3pt
+% \widowpenalty=10000
+% \vfuzz \hfuzz
+% \raggedbottom
+
+% https://texblog.net/latex-archive/plaintex/full-justification-with-typewriter-font/
+% more space between words
+\usepackage{everysel}
+\EverySelectfont{%
+\fontdimen2\font=0.6em% interword space
+\fontdimen3\font=0.3em% interword stretch
+\fontdimen4\font=0.1em% interword shrink
+\fontdimen7\font=0.2em% extra space
+}
 
 \begin{document}
 
@@ -484,6 +494,12 @@ $for(include-before)$
 $include-before$
 
 $endfor$
+
+% % greater inter word spacing
+% \newdimen\origiwspc%
+%   \newdimen\origiwstr%
+% \fontdimen3\font=\origiwstr% (original) inter word stretch
+%   \fontdimen2\font=1em% inter word space
 
 % Inhaltsverzeichnis
 \tableofcontents
