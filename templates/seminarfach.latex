@@ -415,13 +415,13 @@ $endif$
 \usepackage[none]{hyphenat}
 
 % https://latex.org/forum/viewtopic.php?t=21170
-% \tolerance 1414
-% \hbadness 1414
-% \emergencystretch 1.8em
-% \hfuzz 0.3pt
-% \widowpenalty=10000
-% \vfuzz \hfuzz
-% \raggedbottom
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.8em
+\hfuzz 0.3pt
+\widowpenalty=10000
+\vfuzz \hfuzz
+\raggedbottom
 
 % https://texblog.net/latex-archive/plaintex/full-justification-with-typewriter-font/
 % more space between words
