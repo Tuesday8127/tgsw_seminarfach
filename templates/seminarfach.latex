@@ -386,6 +386,10 @@ $endif$
 % nur für documentclass book
 % \counterwithout{figure}{chapter}
 
+% Figure Captions in font size 10pt
+\DeclareCaptionFont{10pt}{\fontsize{10pt}{8pt}\selectfont}
+\captionsetup{font=10pt}
+
 % Selber Counter für Figuren und Tabellen
 % https://tex.stackexchange.com/questions/422131/how-to-use-the-same-numbering-counter-for-figures-tables-and-listings
 \makeatletter
