@@ -38,10 +38,8 @@ $if(fnt-bottom)$
 $endif$
 ]{footmisc}
 
-% for including custom pdf deckblatt
-$if(deckblatt-pdf-datei)$
+% for including external pdf pages
 \usepackage{pdfpages}
-$endif$
 
 % Kopf und Fußzeile
 \usepackage{fancyhdr}
@@ -498,6 +496,11 @@ $for(include-before)$
 $include-before$
 
 $endfor$
+
+% PDF for a poem
+$if(pdf-page-after-titlepage)$
+\includepdf[pages=1]{$pdf-page-after-titlepage$}
+$endif$
 
 % % greater inter word spacing
 % \newdimen\origiwspc%
