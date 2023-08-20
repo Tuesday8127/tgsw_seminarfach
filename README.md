@@ -56,6 +56,8 @@ Um eine eigenes Latex-Deckblatt zu benutzen muss `deckblatt-datei: Pfad-zur-date
 
 Alternativ kann auch eine PDF Datei als Deckblatt verwendet werden: `deckblatt-pdf-datei: ./deckblatt.pdf`
 
+Um eine PDF Datei nach dem Deckblatt einzufügen, kann die Option `pdf-page-after-titlepage: ./poem.pdf` genutzt werden (z.B. für ein Gedicht oder ein Bild).
+
 ### Zitieren
 
 Um Zitate in den Fußnoten nach den Vorgaben zu formatieren, kann diese [CSL-Datei](csl/tgs-weimar-seminarfach.csl) benutzt werden. Dazu muss diese im Header angegeben werden.
